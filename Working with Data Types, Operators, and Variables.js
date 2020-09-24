@@ -27,6 +27,16 @@ isNaN("")
 //also returns false? why is this?
 //returns it because it empty space is considered zero
 
+var sample = "Hello Codeup";
+sample.length;
+//used to find the length of string
+sample.toUpperCase();
+//returns everything to uppercase
+var add = " Students";
+sample.concat(add);
+
+//when replacing components of a variable, a new variable must be established to house the changes
+//for .indexOf you must put the variable name prior to the dot to index it
 var mermaid = 3;
 var bear = 5;
 var hercules = 1;
