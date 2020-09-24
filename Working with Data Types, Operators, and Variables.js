@@ -45,4 +45,13 @@ var total = (mermaid + bear + hercules) * 3;
 var google = 400;
 var amazon = 380;
 var facebook = 350;
-var week = (6 )
+var week = (6 * google) + (4 * amazon) + (10 * facebook)
+
+var x = "Class has space."
+var y = " Schedule has space."
+var enroll = x + y
+
+offer applied = items purchased > 2 and offer is current
+
+var items = (x>2)
+var apply =
