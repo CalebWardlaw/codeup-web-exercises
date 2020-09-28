@@ -95,6 +95,8 @@ function calculateTip(x, y) {
 var total = Number(prompt("How much was the bill?"));
 
 var percent = Number(prompt("What percentage would you like to tip?"));
+//if less than 1 we can write it to assume they are using a decimal point as a percentage
+//if greater than 1 we can assume they are using whole numbers as a percentage
 
 var tipTotal = calculateTip(total, percent);
 
@@ -116,3 +118,16 @@ alert ("You should tip " + tipTotal + " dollars");
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+
+function applyDiscount(price, discount) {
+    return price - (price * discount)
+}
+
+var price = Number(prompt("How much is the item?"));
+
+var discount = Number(prompt("What is the discount percentage as a decimal?"));
+
+var discountPrice = applyDiscount(price, discount);
+
+alert("The discounted item price is " + discountPrice + " dollars.")

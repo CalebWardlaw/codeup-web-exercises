@@ -1,0 +1,10 @@
+function doMath(x, y) {
+    return (x - y)
+}
+
+var x = 100
+
+var y = 50
+
+doMath(100, 50)
+
