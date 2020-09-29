@@ -20,7 +20,17 @@
  * console.logging the function's return value
  */
 
-function analyzeColor(string)
+function analyzeColor(input){
+    if (input === "blue"){
+        return "blue is the color of the sky";
+    } if(input === "red"){
+        return "Strawberrries are red";
+    } if(input === "cyan"){
+        return "I don't know anything about cyan";
+    } else {
+        return "A girl knows no color.";
+    }
+}
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -35,10 +45,25 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
+console.log(analyzeColor(randomColor));
+
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
+var inputSwitch = prompt("Name a color");
+
+switch(inputSwitch) {
+    case "blue":
+        alert("blue is the color of the sky");
+        break;
+    case "red":
+        alert("strawberries are red");
+        break;
+    case "cyan":
+        alert("A girl knows no color");
+        break;
+}
 
 /**
  * TODO:
