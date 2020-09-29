@@ -130,4 +130,4 @@ var discount = Number(prompt("What is the discount percentage as a decimal?"));
 
 var discountPrice = applyDiscount(price, discount);
 
-alert("The discounted item price is " + discountPrice + " dollars.")
+alert("The discounted item price is " + discountPrice + " dollars.");
