@@ -28,7 +28,7 @@ function analyzeColor(input){
     } if(input === "cyan"){
         return "I don't know anything about cyan";
     } else {
-        return "A girl knows no color.";
+        return "A girl has no color.";
     }
 }
 
@@ -45,25 +45,28 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
-console.log(analyzeColor(randomColor));
+// console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
-var inputSwitch = prompt("Name a color");
-
-switch(inputSwitch) {
-    case "blue":
-        alert("blue is the color of the sky");
-        break;
-    case "red":
-        alert("strawberries are red");
-        break;
-    case "cyan":
-        alert("A girl knows no color");
-        break;
-}
+// var inputSwitch = prompt("Name a color");
+//
+// switch(inputSwitch) {
+//     case "blue":
+//         alert("blue is the color of the sky");
+//         break;
+//     case "red":
+//         alert("strawberries are red");
+//         break;
+//     case "cyan":
+//         alert("A girl has no color");
+//         break;
+//     default:
+//         alert("A girl has no" + inputSwitch + "color");
+//         break;
+// }
 
 /**
  * TODO:
@@ -71,6 +74,10 @@ switch(inputSwitch) {
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+// var pass = prompt("Name a color");
+//
+// alert(analyzeColor(pass));
 
 /* ########################################################################## */
 
@@ -93,6 +100,55 @@ switch(inputSwitch) {
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+
+function calculateTotal(luckyNumber, total) {
+    return total - (luckyNumber * total);
+}
+//structuring function for total after discount
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}
+//function for random number generation
+
+var luckyNumber = (getRandomInt(6));
+//expecting value from 0 to 5
+
+var total = prompt("What is your total?")
+//getting total
+
+if (luckyNumber === 1) {
+    alert("Your discounted price is " + total - (total * .10))
+}
+
+if(luckyNumber === 2) {
+    alert("Your discounted price is " + total - (total * .25))
+}
+
+if (luckyNumber === 3) {
+    alert("Your discounted price total is " + (total * .35))
+}
+
+if(luckyNumber === 4) {
+    alert("Your discounted price total is " + (total - ( total * .50))
+}
+
+if (luckyNumber === 5) {
+    alert ("Your discounted price total is " + total - total)
+}
+alert("Your price after discount is " + calculateTotal(luckyNumber, total))
+
+
+
+
+//function to generate number between 0 and 5
+
+// function calculateTotal (luckyNumber, total) {
+//     //expecting to enter two numbers and return a third
+//     return total - (luckyNumber * total)
+// };
+
+
 
 /**
  * TODO:
