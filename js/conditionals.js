@@ -125,44 +125,6 @@ function calculateTotal(luckyNumber, price){
        }
 }
 
-console.log(calculateTotal(0, 100));
-
-//expecting value from 0 to 5
-
-// var total = prompt("What is your total?");
-// //getting total
-
-// if (luckyNumber === 1) {
-//     alert("Your discounted price is " + total - (total * .10));
-// }
-//
-// if(luckyNumber === 2) {
-//     alert("Your discounted price is " + total - (total * .25));
-// }
-//
-// if (luckyNumber === 3) {
-//     alert("Your discounted price total is " + total - (total * .35));
-// }
-//
-// if(luckyNumber === 4) {
-//     alert("Your discounted price total is " + total - ( total * .50));
-// }
-//
-// if (luckyNumber === 5) {
-//     alert ("Your discounted price total is " + total - total);
-// }
-// alert("Your price after discount is " + calculateTotal(luckyNumber, total));
-
-
-
-
-//function to generate number between 0 and 5
-
-// function calculateTotal (luckyNumber, total) {
-//     //expecting to enter two numbers and return a third
-//     return total - (luckyNumber * total)
-// };
-
 
 
 /**
@@ -173,8 +135,12 @@ console.log(calculateTotal(0, 100));
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
 
+var billTotal = prompt("What was your total bill?");
+
+alert(luckyNumber + " is your lucky number. Your price before discount is " + billTotal + ". Discounted price is " + calculateTotal(luckyNumber, billTotal));
+// calculateTotal (luckyNumber, billTotal);
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
