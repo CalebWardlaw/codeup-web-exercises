@@ -172,16 +172,15 @@ function calculateTotal(luckyNumber, price){
 var decision = confirm("Would you like to enter a number?")
         //returns boolean
 
-    if (decision === false) {
-        alert("Goodbye.")
-    }
-        //cancel notification
+    if (decision === false){
+        alert ("Goodbye.")
+        //exiting if false
 
-    if (decision === true) {
+    } else if (decision === true) {
         var userInput = Number(prompt("Please enter number"));
-        //getting number
+        //getting number if true
 
-    if (isNaN(userInput)) {
+        if (isNaN(userInput)) {
         alert("Hey that's not a number!")
     }
         //checking if input isNaN
@@ -201,10 +200,6 @@ var decision = confirm("Would you like to enter a number?")
     }
         //finding if it is odd
 
-    var plusOneHundred = Number(userInput + 100)
-        //setting var for addition
-
-    alert(userInput + "100 is " + plusOneHundred)
 
 
 
