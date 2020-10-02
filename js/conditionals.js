@@ -101,52 +101,29 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
-function calculateTotal(luckyNumber, total) {
-    return total - (luckyNumber * total);
-}
+
 //structuring function for total after discount
 
-function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
+function calculateTotal(luckyNumber, price){
+       if (luckyNumber===1) {
+           return price - (.10 * price);
+       }
+       if (luckyNumber===2) {
+           return price - (.25 * price);
+       }
+       if (luckyNumber===3) {
+           return price - (.35 * price);
+       }
+       if (luckyNumber===4) {
+           return price - (.50 * price);
+       }
+       if (luckyNumber===5) {
+           return price - (1 * price);
+       }
+       if (luckyNumber===0) {
+           return price;
+       }
 }
-//function for random number generation
-
-var luckyNumber = (getRandomInt(6));
-//expecting value from 0 to 5
-
-var total = prompt("What is your total?")
-//getting total
-
-if (luckyNumber === 1) {
-    alert("Your discounted price is " + total - (total * .10))
-}
-
-if(luckyNumber === 2) {
-    alert("Your discounted price is " + total - (total * .25))
-}
-
-if (luckyNumber === 3) {
-    alert("Your discounted price total is " + (total * .35))
-}
-
-if(luckyNumber === 4) {
-    alert("Your discounted price total is " + (total - ( total * .50))
-}
-
-if (luckyNumber === 5) {
-    alert ("Your discounted price total is " + total - total)
-}
-alert("Your price after discount is " + calculateTotal(luckyNumber, total))
-
-
-
-
-//function to generate number between 0 and 5
-
-// function calculateTotal (luckyNumber, total) {
-//     //expecting to enter two numbers and return a third
-//     return total - (luckyNumber * total)
-// };
 
 
 
@@ -158,7 +135,12 @@ alert("Your price after discount is " + calculateTotal(luckyNumber, total))
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
+
 // var luckyNumber = Math.floor(Math.random() * 6);
+//
+// var billTotal = prompt("What was your total bill?");
+//
+// alert(luckyNumber + " is your lucky number. Your price before discount is " + billTotal + ". Discounted price is " + calculateTotal(luckyNumber, billTotal));
 
 /**
  * TODO:
@@ -176,3 +158,28 @@ alert("Your price after discount is " + calculateTotal(luckyNumber, total))
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+var decision = confirm("Would you like to enter a number?")
+        //returns boolean
+
+    if (decision === true) {
+        var userInput = Number(prompt("Please enter number"));
+    }
+    //getting number from user
+
+    if (isNaN(userInput)){
+        alert(userInput + " is not a number.");
+    }
+    //alert for not a number
+
+    if (userInput % 2 === 0) {
+        alert(userInput + " is an even number.")
+    }    else (alert (userInput + " is an odd number."));
+    //determining if odd or even
+
+    if (userInput > 0) {
+        alert(userInput + " is a positive number.")}
+        else (alert (userInput + " is a negative number."));
+    //determining if negative or positive
+
+
