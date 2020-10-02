@@ -124,10 +124,10 @@
 
 //TODO: Create a do-while loop that prompts the user for a color and continues to prompt until the string passed is "blue"
 
-do{
-    var pickColor = prompt("Pick a color.")
-
-} while(pickColor !== "blue")
+// do{
+//     var pickColor = prompt("Pick a color.")
+//
+// } while(pickColor !== "blue")
 
 //here the ! is attached to the equals symbol
 /*********************************************
@@ -141,16 +141,35 @@ do{
 
 //TODO TOGETHER: Explore basic for loop syntax
 
+// for (var i = 0; i<10; i++){
+//     console.log('for loop iteration #' + i)
+// }
+
 
 // TODO TOGETHER: Write a for loop that loops through numbers 0 - 5 (inclusive);
 
+// for (var i = 0; i < 5; i++){
+//     console.log(i)
+// }
 
 // TODO TOGETHER: Why are loops beneficial?
 
+//To do things over and over again without repeating yourself!
 
 // TODO TOGETHER: Console.log each color from the array randomColors
-//  var randomColors = ["red","orange","yellow","blue","green"]
+var randomColors = ["red","orange","yellow","blue","green"]
 
+//randomColors.length =5 this is the same as i < 5 , the final index is 4
+
+for(var index = 0; i<5; index++  ){
+    console.log(randomColors[index]);
+}
+//This does the same things as console.log(randomColors[index]);
+// console.log(randomColors[0])
+// console.log(randomColors[1])
+// console.log(randomColors[2])
+// console.log(randomColors[3])
+// console.log(randomColors[4])
 
 // for (var i = 0; i < randomColors.length; i++){
 // 	console.log(randomColors[i]);;
@@ -160,9 +179,16 @@ do{
 
 // TODO TOGETHER: Using a for loop, log all even numbers 0 - 100;
 
+// for(var i = 0; i <= 100; i+=2){
+//     if(i % 2 === 0)
+//         console.log(i);
+// }
 
 // TODO: Using a for loop, log all numbers divisible by 5, from 0 - 100;
 
+// for(var i = 0; i <= 100; i+=5){
+//     console.log(i)
+// }
 
 // TODO: Using a for loop, complete the FizzBuzz challenge:
 //  Your program should count up to 100.
@@ -171,7 +197,16 @@ do{
 //  If divisible by 3 and 5, log "FizzBuzz"
 //  All other cases, just log the number.
 
+for(var i=0; i<=100; i++){
+    if(i % 3 === 0)
+            console.log(i + " Fizz")
+    if(i % 5 === 0)
+            console.log(i + " Buzz")
+    if(i % 3 === 0 && i % 5 === 0)
+            console.log(i + " FizzBuzz")
 
+
+}
 
 /*********************************************
  *              BREAKS & CONTINUES
