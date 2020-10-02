@@ -175,51 +175,51 @@ function analyzeColor(input) {
      * HINT: The way we prompt for a value could be improved
      */
 
-var decision = confirm("Would you like to enter a number?")
-        //returns boolean
-
-    if (decision === false){
-        alert ("Goodbye.")
-        //exiting if false
-
-    } else if (decision === true) {
-        var userInput = Number(prompt("Please enter number"));
-        //getting number if true
-
-        if (isNaN(userInput)) {
-        alert("Hey that's not a number!")
-    }
-        //checking if input isNaN
-
-    else if (typeof(userInput)==="number") {
-        alert("Let us continue.")
-    }
-        //continuing if number
-
-    if (userInput % 2 === 0) {
-        alert(userInput + " is an even number")
-    }
-        //finding if it is even
-
-    else if (userInput % 2 !== 0) {
-        alert(userInput + " is an odd number")
-    }
-        //finding if it is odd
-
-    var addOneHundred = userInput + 100;
-    alert(userInput + " + 100 is " + addOneHundred)
-
-        //creating variable for arithmetic
-        //alerting outcome
-
-
-    if (userInput >=0) {
-        alert(userInput + " is a positive number")
-    }
-        //find if input is positive
-
-    else { alert(userInput + " is a negative number")}}
-        //finding if input is negative
+// var decision = confirm("Would you like to enter a number?")
+//         //returns boolean
+//
+//     if (decision === false){
+//         alert ("Goodbye.")
+//         //exiting if false
+//
+//     } else if (decision === true) {
+//         var userInput = Number(prompt("Please enter number"));
+//         //getting number if true
+//
+//         if (isNaN(userInput)) {
+//         alert("Hey that's not a number!")
+//     }
+//         //checking if input isNaN
+//
+//     else if (typeof(userInput)==="number") {
+//         alert("Let us continue.")
+//     }
+//         //continuing if number
+//
+//     if (userInput % 2 === 0) {
+//         alert(userInput + " is an even number")
+//     }
+//         //finding if it is even
+//
+//     else if (userInput % 2 !== 0) {
+//         alert(userInput + " is an odd number")
+//     }
+//         //finding if it is odd
+//
+//     var addOneHundred = userInput + 100;
+//     alert(userInput + " + 100 is " + addOneHundred)
+//
+//         //creating variable for arithmetic
+//         //alerting outcome
+//
+//
+//     if (userInput >=0) {
+//         alert(userInput + " is a positive number")
+//     }
+//         //find if input is positive
+//
+//     else { alert(userInput + " is a negative number")}}
+//         //finding if input is negative
 })();
 
 

@@ -1,3 +1,4 @@
+(function () {
 "use strict";
 
 /**
@@ -94,7 +95,7 @@ function calculateTip(x, y) {
 
 var total = Number(prompt("How much was the bill?"));
 
-var percent = Number(prompt("What percentage would you like to tip?"));
+var percent = Number(prompt("What percentage would you like to tip? (Written as a decimal)"));
 //if less than 1 we can write it to assume they are using a decimal point as a percentage
 //if greater than 1 we can assume they are using whole numbers as a percentage
 
@@ -131,3 +132,4 @@ var discount = Number(prompt("What is the discount percentage as a decimal?"));
 var discountPrice = applyDiscount(price, discount);
 
 alert("The discounted item price is " + discountPrice + " dollars.");
+})();
