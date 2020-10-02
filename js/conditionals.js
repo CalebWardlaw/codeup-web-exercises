@@ -24,13 +24,22 @@ function analyzeColor(input){
     if (input === "blue"){
         return "blue is the color of the sky";
     } if(input === "red"){
-        return "Strawberrries are red";
+        return "Strawberries are red";
     } if(input === "cyan"){
         return "I don't know anything about cyan";
     } else {
-        return "A girl has no color.";
+        return "A girl has no " + input + " color.";
     }
 }
+
+// console.log(blue);
+// //expecting "blue is the color of the sky";
+// console.log(red);
+// //expecting "strawberries are red"
+// console.log(cyan);
+// //expecting "I don't know anything about cyan
+// console.log(orange);
+// //expecting "a girl has no color"
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -51,6 +60,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
+
 // var inputSwitch = prompt("Name a color");
 //
 // switch(inputSwitch) {
@@ -64,7 +74,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 //         alert("A girl has no color");
 //         break;
 //     default:
-//         alert("A girl has no" + inputSwitch + "color");
+//         alert("A girl has no " + inputSwitch + " color");
 //         break;
 // }
 
@@ -168,18 +178,22 @@ var decision = confirm("Would you like to enter a number?")
     //getting number from user
 
     if (isNaN(userInput)){
-        alert(userInput + " is not a number.");
+        alert("That is NOT a number.");
+    } else alert(userInput + " is a number!")
+
+    //alert for not a number/is a number
+
+    if(isNaN(userInput % 2)){
+        break;
     }
-    //alert for not a number
-
-    if (userInput % 2 === 0) {
-        alert(userInput + " is an even number.")
-    }    else (alert (userInput + " is an odd number."));
-    //determining if odd or even
-
-    if (userInput > 0) {
-        alert(userInput + " is a positive number.")}
-        else (alert (userInput + " is a negative number."));
-    //determining if negative or positive
-
+//     if (userInput % 2 === 0) {
+//         alert(userInput + " is an even number.")
+//     }    else (alert (userInput + " is an odd number."));
+//     //determining if odd or even
+//
+//     if (userInput > 0) {
+//         alert(userInput + " is a positive number.")}
+//         else (alert (userInput + " is a negative number."));
+//     //determining if negative or positive
+// //
 
