@@ -93,31 +93,43 @@
 //Because 10 ! < 10 (check variables)
 
 // TODO TOGETHER: Refactor the example above using a do-while loop. What behavior do we notice?
-var i = 10;
-
-do{
-    console.log(i);
-    i++;
-}while(i<10)
+// var i = 10;
+//
+// do{
+//     console.log(i);
+//     i++;
+// }while(i<10)
 
 //useful for making something happening once and then check, mandatory confirms like starting
 //an application
 
 //TODO TOGETHER: Create a do-while loop that asks the user to confirm: "Would you like to exit?" What difference do you notice?
 
-do{
-    var myOtherQuestion = confirm("Would you like to exit?");
-}while(!myOtherQuestion);
+// do{
+//     var myOtherQuestion = confirm("Would you like to exit?");
+// }while(!myOtherQuestion);
 
 //can also use myOtherQuestion === false instead of !myOtherQuestion
 
 //TODO TOGETHER: Create a do-while loop that counts up to 20 (inclusive) by 2s (0, 2, 4...)
 // (0, 2, 4...20)
 
+// var i = 0;
+//
+// do{
+//     console.log(i);
+//     i+=2
+// }while(i <=20)
+
 
 //TODO: Create a do-while loop that prompts the user for a color and continues to prompt until the string passed is "blue"
 
+do{
+    var pickColor = prompt("Pick a color.")
 
+} while(pickColor !== "blue")
+
+//here the ! is attached to the equals symbol
 /*********************************************
  *               FOR LOOPS
  *********************************************/
