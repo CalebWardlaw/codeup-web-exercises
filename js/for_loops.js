@@ -21,13 +21,14 @@
 
 /*Use a for loop and the code from the previous lessons to generate 10 random numbers between 20 and 200 and output to the console whether each number is odd or even. For example:*/
 
-    var randomNumber = Math.floor(Math.random() * 10);
-
-    console.log(randomNumber);
-
-    for (;;){
-
+for (var i = 20; i <= 200; i++){
+    if ( i % 2 === 0){
+        console.log(i + " is even")
+    } else {
+        console.log(i + " is odd")
     }
+
+}
 
 
 
