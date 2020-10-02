@@ -33,14 +33,20 @@
 
     //Setting global var for "for loop"
 
-    for (var i = 20; i <= 200; i++){
-        if ( i % 2 === 0){
-            console.log(i + " is even")
-        } else {
-            console.log(i + " is odd")
-        }
-
+    for(i;i<=10;){
+        console.log()
     }
+
+
+
+    // for (var i = 20; i <= 200; i++){
+    //     if ( i % 2 === 0){
+    //         console.log(i + " is even")
+    //     } else {
+    //         console.log(i + " is odd")
+    //     }
+    //
+    // }
 
 
 
