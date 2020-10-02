@@ -65,12 +65,12 @@
 
 //TODO TOGETHER: Create a while loop that asks the user to confirm: "Would you like to exit?"
 
-var i = confirm("Would you like to exit?")
+// var myQuestion;
+//
+// while(!myQuestion){
+//     myQuestion = confirm("Would you like to exit?")
+// }
 
-    while(i===false) {
-        console.log(i)
-        i++
-    }
 /*********************************************
  *               DO-WHILE LOOPS
  *********************************************/
@@ -90,12 +90,26 @@ var i = confirm("Would you like to exit?")
 
 
 // TODO TOGETHER: Why doesnt the example above run?
-
+//Because 10 ! < 10 (check variables)
 
 // TODO TOGETHER: Refactor the example above using a do-while loop. What behavior do we notice?
+var i = 10;
 
+do{
+    console.log(i);
+    i++;
+}while(i<10)
+
+//useful for making something happening once and then check, mandatory confirms like starting
+//an application
 
 //TODO TOGETHER: Create a do-while loop that asks the user to confirm: "Would you like to exit?" What difference do you notice?
+
+do{
+    var myOtherQuestion = confirm("Would you like to exit?");
+}while(!myOtherQuestion);
+
+//can also use myOtherQuestion === false instead of !myOtherQuestion
 
 //TODO TOGETHER: Create a do-while loop that counts up to 20 (inclusive) by 2s (0, 2, 4...)
 // (0, 2, 4...20)
