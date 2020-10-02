@@ -200,35 +200,19 @@ var decision = confirm("Would you like to enter a number?")
     }
         //finding if it is odd
 
+    var addOneHundred = userInput + 100;
+    alert(userInput + " + 100 is " + addOneHundred)
+
+        //creating variable for arithmetic
+        //alerting outcome
 
 
+    if (userInput >=0) {
+        alert(userInput + " is a positive number")
+    }
+        //find if input is positive
 
-    // } else if (decision === false) {
-    //     alert ("Goodbye.")
-    //     //allowing user to cancel
-    // } if (isNaN(userInput)) {
-    //     alert("That is not a number")
-    //     //checking for number
-    // } else if (userInput % 2 === 0) {
-    //     alert(userInput + " is an even number.")
-}
-
-
-    //want to evaluate if input is NaN, and if true, alert user and stop evaluating
-
-//     if(isNaN(userInput)) {
-//         alert ("That is not a number.")
-//     } else {
-//         alert (userInput +" is a number. We shall continue.")
-//         //NaN determination
-//         } if (userInput % 2 === 0) {
-//         alert (userInput + " is an even Number")
-// }       else alert (userInput + " is an odd number")
-//         //odd even determination
-
-
-
-
-
+    else { alert(userInput + " is a negative number")}
+        //finding if input is negative
 
 
