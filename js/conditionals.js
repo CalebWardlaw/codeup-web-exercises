@@ -172,28 +172,68 @@ function calculateTotal(luckyNumber, price){
 var decision = confirm("Would you like to enter a number?")
         //returns boolean
 
+    if (decision === false) {
+        alert("Goodbye.")
+    }
+        //cancel notification
+
     if (decision === true) {
         var userInput = Number(prompt("Please enter number"));
+        //getting number
+
+    if (isNaN(userInput)) {
+        alert("Hey that's not a number!")
     }
-    //getting number from user
+        //checking if input isNaN
 
-    if (isNaN(userInput)){
-        alert("That is NOT a number.");
-    } else alert(userInput + " is a number!")
-
-    //alert for not a number/is a number
-
-    if(isNaN(userInput % 2)){
-        break;
+    else if (typeof(userInput)==="number") {
+        alert("Let us continue.")
     }
-//     if (userInput % 2 === 0) {
-//         alert(userInput + " is an even number.")
-//     }    else (alert (userInput + " is an odd number."));
-//     //determining if odd or even
-//
-//     if (userInput > 0) {
-//         alert(userInput + " is a positive number.")}
-//         else (alert (userInput + " is a negative number."));
-//     //determining if negative or positive
-// //
+        //continuing if number
+
+    if (userInput % 2 === 0) {
+        alert(userInput + " is an even number")
+    }
+        //finding if it is even
+
+    else if (userInput % 2 !== 0) {
+        alert(userInput + " is an odd number")
+    }
+        //finding if it is odd
+
+    var plusOneHundred = Number(userInput + 100)
+        //setting var for addition
+
+    alert(userInput + "100 is " + plusOneHundred)
+
+
+
+    // } else if (decision === false) {
+    //     alert ("Goodbye.")
+    //     //allowing user to cancel
+    // } if (isNaN(userInput)) {
+    //     alert("That is not a number")
+    //     //checking for number
+    // } else if (userInput % 2 === 0) {
+    //     alert(userInput + " is an even number.")
+}
+
+
+    //want to evaluate if input is NaN, and if true, alert user and stop evaluating
+
+//     if(isNaN(userInput)) {
+//         alert ("That is not a number.")
+//     } else {
+//         alert (userInput +" is a number. We shall continue.")
+//         //NaN determination
+//         } if (userInput % 2 === 0) {
+//         alert (userInput + " is an even Number")
+// }       else alert (userInput + " is an odd number")
+//         //odd even determination
+
+
+
+
+
+
 
