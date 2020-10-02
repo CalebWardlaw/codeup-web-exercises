@@ -163,12 +163,12 @@ var decision = confirm("Would you like to enter a number?")
         //returns boolean
 
     if (decision === true) {
-        var userInput = prompt("Please enter number");
+        var userInput = Number(prompt("Please enter number"));
     }
     //getting number from user
 
     if (isNaN(userInput)){
-        alert("You did not pick a number.");
+        alert(userInput + " is not a number.");
     }
     //alert for not a number
 
