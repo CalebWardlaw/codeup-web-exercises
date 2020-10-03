@@ -21,38 +21,39 @@
 
 /*Use a for loop and the code from the previous lessons to generate 10 random numbers between 20 and 200 and output to the console whether each number is odd or even. For example:*/
 
-    function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-
-    //Function for obtaining random integer in range
-
-    var randomNumber = getRandomInt(20, 200)
-
-    //Setting global var for "for loop"
-
-    for(i;i<=10;){
-        console.log()
-    }
-
-
-
-    // for (var i = 20; i <= 200; i++){
-    //     if ( i % 2 === 0){
-    //         console.log(i + " is even")
-    //     } else {
-    //         console.log(i + " is odd")
-    //     }
-    //
+    // function getRandomInt(min, max) {
+    //     min = Math.ceil(min);
+    //     max = Math.floor(max);
+    //     return Math.floor(Math.random() * (max - min + 1)) + min;
     // }
-
+    //
+    // for(var i = 0; i < 10; i++){
+    //
+    //     var randomNumber = getRandomInt(20, 200)
+    //
+    //     if (randomNumber % 2 === 0){
+    //         console.log(randomNumber + " is even")
+    //     } else {
+    //         console.log(randomNumber + " is odd")
+    //     }
+    // }
+    //
+    //
 
 
 /*Create a for loop that uses console.log to create the output shown below. NUMBER PYRAMID*/
 
+    // var arr = ["1", "22", "333", "4444", "55555", "666666", "7777777", "88888888", "999999999"]
+    // for (let i = 0; i < arr.length; i++) {
+    //     console.log(arr[i])
+    // }
 
+    // var arr = ["1", "22", "333", "4444", "55555", "666666", "7777777", "88888888", "999999999"]
+    // for (let i = 0; i < 10, i++){
+    //     console.log(arr[0])
+    // }
+
+    //why doesn't this work as well?
 
 
 
