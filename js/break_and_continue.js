@@ -14,10 +14,14 @@ Use a loop and the continue statement to output all the odd numbers between 1 an
         } else {
             break;
         }
+
         var pickNumber = parseInt(prompt("Pick an odd number between 1 and 50"));
         }
+        console.log("Number to skip is: " + pickNumber)
         for (var i = 0; i < 50; i++){
-        if(i === pickNumber || i % 2 === 0){
+
+        if(i === pickNumber){
+            console.log("Yikes! Skipping number: " + pickNumber)
             continue;
         } console.log(i)
     }
