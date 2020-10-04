@@ -19,11 +19,16 @@ Use a loop and the continue statement to output all the odd numbers between 1 an
         }
         console.log("Number to skip is: " + pickNumber)
         for (var i = 0; i < 50; i++){
-
         if(i === pickNumber){
             console.log("Yikes! Skipping number: " + pickNumber)
             continue;
-        } console.log(i)
+        }
+        if(i % 2 === 0){
+            continue;
+        }
+        if(i % 2 !== 0){
+            console.log("Here is an odd number: " + i)
+        }
     }
 
     // We can get an iteration to skip using continue;
