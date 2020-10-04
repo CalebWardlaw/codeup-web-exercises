@@ -1,5 +1,4 @@
-(function () {
-"use strict";
+
 
 /* While loop using console.log*/
 
@@ -16,27 +15,48 @@
 
 
 
-var totalCones = Math.floor(Math.random() * 50) + 50;
+// var totalCones = Math.floor(Math.random() * 50) + 50;
+//
+//
+// alert("Cone total is " + totalCones)
+//
+// do {
+//     var sold = Math.floor(Math.random() * 5) + 1;
+//     console.log(sold + " cones sold.");
+//     //logging to see how many sold during iteration
+//
+//     function nextRound (sold){
+//         return (totalCones - sold);
+//     }
+//     //creating function to show remaining cones for next iteration
+//
+//     console.log(nextRound(sold) + " cones remain.");
+//     //logging to see how many cones remain for next iteration
+//
+//     if(nextRound(sold) !== totalCones) {
+//
+//         console.log(sold)
+//
+//     }
+//
+//
+// } while(sold < 5)
+//
+//     //function takes in something and outputs something else
 
+var totalCones = Math.floor(Math.random() * 50) + 50;
 alert("Cone total is " + totalCones)
 
-do {
-    var sold = Math.floor(Math.random() * 5) + 1;
-    var remaining = (totalCones - sold)
 
-    function nextRound (sold){
-        return (totalCones - sold);
+
+
+    var sold = Math.floor(Math.random() * 5) + 1;
+    console.log(sold + " cones sold.");
+
+    while(){
+
     }
 
-    console.log(sold + " cones sold ...")
-    console.log(nextRound(sold) + " remain")
-
-
-    // need to establish how many cones are remaining
-
-} while(sold < 4)
-
-    //function takes in something and outputs something else
 
 
 
@@ -44,12 +64,6 @@ do {
 
 
 
-
-
-
-
-
-})();
 
 
 
