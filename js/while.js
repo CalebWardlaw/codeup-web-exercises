@@ -29,13 +29,12 @@ do {
     }
 
     console.log(sold + " cones sold ...")
-    console.log(remaining + " cones remain")
-
+    console.log(nextRound(sold) + " remain")
 
 
     // need to establish how many cones are remaining
 
-} while(remaining > 0)
+} while(sold < 4)
 
     //function takes in something and outputs something else
 
