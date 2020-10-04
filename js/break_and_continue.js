@@ -5,7 +5,7 @@
 Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered. */
 
 
-    var pickNumber = prompt("Pick an odd number between 1 and 50");
+    var pickNumber = parseInt(prompt("Pick an odd number between 1 and 50"));
     while (true) {
         if (isNaN(pickNumber)) {
             alert("That's not a number, please retry.");
@@ -14,10 +14,24 @@ Use a loop and the continue statement to output all the odd numbers between 1 an
         } else {
             break;
         }
-        var pickNumber = prompt("Please pick another number.");
-    }   while (true){
-
+        var pickNumber = parseInt(prompt("Pick an odd number between 1 and 50"));
+        }
+        for (var i = 0; i < 50; i++){
+        if(i === pickNumber || i % 2 === 0){
+            continue;
+        } console.log(i)
     }
+
+    // We can get an iteration to skip using continue;
+// for (var i = 1; i < 100; i++) {
+//
+// 	if (i % 2 !== 0) {
+// 		// skipping all odd numbers;
+//         continue;
+// 	}
+//
+// 	console.log('Here is a lovely even number: ' + i);
+// }
 
 
 })();
