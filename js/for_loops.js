@@ -7,9 +7,9 @@
     var i = 1
 
     function showMultiplicationTable(number) {
-        while (i <= 10) {
-            console.log(i * number)
-            i++;
+        for(var i =1; i <= 10; i++){
+            var product = num * i;
+            console.log(num + "x" + i + i + " = " + product);
         }
     }
 
