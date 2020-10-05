@@ -61,21 +61,21 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-    function returnFirst (input){
+    function first (input){
         return input[0];
     }
 
     // returnFirst([1, 2, 3, 4, 5,])
         //expecting 1
 
-    function returnSecond (input){
+    function second (input){
         return input[1];
     }
 
     // returnSecond([1, 2, 3, 4, 5,])
         //expecting 2
-git
-    function returnThird (input){
+
+    function third (input){
         return input[2];
     }
 
