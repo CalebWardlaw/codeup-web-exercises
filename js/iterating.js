@@ -61,8 +61,8 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-    // function first([1, 2, 3, 4, 5]){
-    //     return
-    // }
+    function returnFirst (array){
+
+    }
 
 })();
