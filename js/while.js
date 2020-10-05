@@ -1,14 +1,15 @@
-
+(function (){
+    "use strict";
 
 /* While loop using console.log*/
 
 
-// var i = 1
-// while(i<16){
-//     for( var i = 1; i <= 16; i++){
-//         console.log(Math.pow(2,i))
-//     }
-// }
+var i = 1
+while(i<16){
+    for( var i = 1; i <= 16; i++){
+        console.log(Math.pow(2,i))
+    }
+}
 
 //Why does this run despite the duplicate declaration notification? Can it be refactored to avoid it?
 
@@ -44,21 +45,21 @@
 //
 //     //function takes in something and outputs something else
 
-var totalCones = Math.floor(Math.random() * 50) + 50;
-alert("Cone total is " + totalCones)
+// var totalCones = Math.floor(Math.random() * 50) + 50;
+// alert("Cone total is " + totalCones)
+//
+//
+//
+//
+//     var sold = Math.floor(Math.random() * 5) + 1;
+//     console.log(sold + " cones sold.");
+//
+//     while(){
+//
+//     }
 
 
-
-
-    var sold = Math.floor(Math.random() * 5) + 1;
-    console.log(sold + " cones sold.");
-
-    while(){
-
-    }
-
-
-
+})();
 
 
 
