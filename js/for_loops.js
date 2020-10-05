@@ -13,11 +13,16 @@
         }
     }
 
+    showMultiplicationTable(9)
+
+
     // console.log(showMultiplicationTable(9))
     // expecting 9, 18 , 27 ... 90
 
+    //When I don't console log in the code, function is not callable in console. Why?
 
-/*Use a for loop and the code from the previous lessons to generate 10 random numbers between 20 and 200 and output to the console whether each number is odd or even. For example:*/
+
+/*Use a for loop and the code from the previous lessons to generate 10 random numbers between 20 and 200 and output to the console whether each number is odd or even. */
 
     // function getRandomInt(min, max) {
     //     min = Math.ceil(min);
@@ -44,26 +49,29 @@
     //     console.log(arr[i])
     // }
 
+
+
+    //why doesn't this (below) work as well?
+    //because "i" is getting incremented and not the body?
+
     // var arr = ["1", "22", "333", "4444", "55555", "666666", "7777777", "88888888", "999999999"]
-    // for (let i = 0; i < 10, i++){
+    // for (let i = 0; i < 9; i++){
     //     console.log(arr[0])
     // }
-
-    //why doesn't this work as well?
 
 
 
 
 /*Create a for loop that uses console.log to create the output shown below. Countdown from 100 by 5 to 5*/
 
-// for(var i = 100; i > 0 ; ++i){
+// for(var i = 100; i > 0 ; i++){
 //     console.log(i);
 //     i-=6
 //     //why does this need to be six?
 // }
 //
-
-
+//
+//
 
 
 
