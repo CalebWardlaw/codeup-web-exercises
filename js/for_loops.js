@@ -7,9 +7,9 @@
     var i = 1
 
     function showMultiplicationTable(number) {
-        while (i <= 10) {
-            console.log(i * number)
-            i++;
+        for(var i =1; i <= 10; i++){
+            var product = num * i;
+            console.log(num + "x" + i + i + " = " + product);
         }
     }
 
@@ -43,13 +43,22 @@
 
 
 /*Create a for loop that uses console.log to create the output shown below. NUMBER PYRAMID*/
-
+    //My solution (below)
     // var arr = ["1", "22", "333", "4444", "55555", "666666", "7777777", "88888888", "999999999"]
     // for (var i = 0; i < arr.length; i++) {
     //     console.log(arr[i])
     // }
 
+    //Nested loop option per instructor (below)
 
+    for(var i = 1; i <= 9 ; i++){
+        var output = '';
+        //empty string for concat. later
+            for (var j = 1 ; j <= i++ ;){
+                i += i;
+            }
+        console.log(output);
+    }
 
     //why doesn't this (below) work as well?
     //because "i" is getting incremented and not the body?
@@ -72,6 +81,7 @@
 //
 //
 //
+
 
 
 
