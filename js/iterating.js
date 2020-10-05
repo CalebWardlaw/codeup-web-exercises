@@ -1,4 +1,4 @@
-
+(function(){
     "use strict";
 
     /**
@@ -74,11 +74,12 @@
 
     // returnSecond([1, 2, 3, 4, 5,])
         //expecting 2
-
+git
     function returnThird (input){
         return input[2];
     }
 
     // returnThird([1, 2, 3, 4, 5,])
         //expecting 3
+})();
 
