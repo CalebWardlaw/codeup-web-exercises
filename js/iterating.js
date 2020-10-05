@@ -1,4 +1,4 @@
-(function(){
+
     "use strict";
 
     /**
@@ -61,8 +61,24 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-    function returnFirst (array){
-
+    function returnFirst (input){
+        return input[0];
     }
 
-})();
+    // returnFirst([1, 2, 3, 4, 5,])
+        //expecting 1
+
+    function returnSecond (input){
+        return input[1];
+    }
+
+    // returnSecond([1, 2, 3, 4, 5,])
+        //expecting 2
+
+    function returnThird (input){
+        return input[2];
+    }
+
+    // returnThird([1, 2, 3, 4, 5,])
+        //expecting 3
+
