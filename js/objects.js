@@ -12,6 +12,14 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+    // var person = {};
+    //
+    // person.firstName="Caleb";
+    // console.log(person.firstName);
+    // person.lastName="Wardlaw";
+    // console.log(person.lastName);
+
+
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -21,6 +29,9 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+
+    // person.sayHello="Hello from Caleb Wardlaw!";
+    // console.log(person.sayHello);
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -36,11 +47,21 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    function discount(amount){
+        if (amount > Number(200)){
+            var discountedPrice = (amount - (.12 * amount))
+            console.log(name + "s price before discount: " + amount)
+            console.log(name + "s price after discount:" + discountedPrice)
+        } else {
+            console.log("Minimum not met. No discount applied.")
+        }
+    }
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
