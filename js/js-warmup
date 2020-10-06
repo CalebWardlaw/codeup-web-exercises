@@ -9,7 +9,7 @@
 function sum3s(numbers) {
     var output;
     numbers.forEach(function(number) {
-        if (number = 3) {
+        if (number === 3) {
             output += 3;
         }
     });
