@@ -36,8 +36,12 @@
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
-     * discount. Write a JS program, using conditionals, that logs to the
-     * browser, how much Ryan, Cameron and George need to pay. We know that
+     * discount.
+     *
+     * Write a JS program, using conditionals, that logs to the
+     * browser, how much Ryan, Cameron and George need to pay.
+     *
+     * We know that
      * Cameron bought $180, Ryan $250 and George $320. Your program will have to
      * display a line with the name of the person, the amount before the
      * discount, the discount, if any, and the amount after the discount.
@@ -53,15 +57,20 @@
         {name: 'George', amount: 320}
     ];
 
-    function discount(amount){
-        if (amount > Number(200)){
-            var discountedPrice = (amount - (.12 * amount))
-            console.log(name + "s price before discount: " + amount)
-            console.log(name + "s price after discount:" + discountedPrice)
-        } else {
-            console.log("Minimum not met. No discount applied.")
-        }
-    }
+    shoppers.forEach(array)
+
+
+
+
+    // function discount(){
+    //     if (amount > Number(200)){
+    //         var discountedPrice = (amount - (.12 * amount))
+    //         console.log(name + "s price before discount: " + amount)
+    //         console.log(name + "s price after discount:" + discountedPrice)
+    //     } else {
+    //         console.log("Minimum not met. No discount applied.")
+    //     }
+    // }
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
