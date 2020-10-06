@@ -1,4 +1,4 @@
-(function() {
+(function (searchElement, fromIndex) {
     "use strict";
 
     /**
@@ -51,26 +51,32 @@
      * and console.log the relevant messages for each person
      */
 
-    var shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
-    ];
-
-    shoppers.forEach(array)
-
-
-
-
-    // function discount(){
-    //     if (amount > Number(200)){
-    //         var discountedPrice = (amount - (.12 * amount))
-    //         console.log(name + "s price before discount: " + amount)
-    //         console.log(name + "s price after discount:" + discountedPrice)
+    // var shoppers = [
+    //     {name: 'Cameron', amount: 180},
+    //     {name: 'Ryan', amount: 250},
+    //     {name: 'George', amount: 320}
+    // ];
+    //
+    // function discount(amount){
+    //     return amount - (amount * .12);
+    // };
+    //
+    //
+    // shoppers.forEach(shopper => {
+    //     if (shopper.amount > 200){
+    //         console.log(shopper.name + "| Total: " + shopper.amount + "| Discount total: " + discount(shopper.amount))
     //     } else {
-    //         console.log("Minimum not met. No discount applied.")
+    //         console.log("Discount NOT available for " + shopper.name)
     //     }
-    // }
+    // });
+    //
+
+
+
+
+
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -84,6 +90,16 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        {title: "GodFall",firstName: "John" ,lastName: "Smith"},
+        {title: "Beyond Light",firstName: "Aaron", lastName:"Jones"},
+        {title:"SackBoy",firstName: "Luke", lastName:"Scott"},
+        {title:"God of War",firstName: "Luke", lastName:"Scott"},
+        {title:"4k Resolution",firstName: "Luke", lastName:"Scott"},
+        ];
+
+
 
     /**
      * TODO:
@@ -109,6 +125,16 @@
      *      ---
      *      ...
      */
+
+
+    books.forEach(book => {
+
+        console.log("Title: " + book.title)
+        console.log("Author: " + book.firstName + " " + book.lastName)
+        console.log("---")
+    })
+
+
 
     /**
      * Bonus:
