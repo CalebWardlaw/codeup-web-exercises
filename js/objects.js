@@ -56,8 +56,8 @@
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
+    console.log(shoppers[0])
 
-    shoppers.forEach(array)
 
 
 
