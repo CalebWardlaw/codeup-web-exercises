@@ -1,8 +1,8 @@
 (function(){
     "use strict";
 
-    // var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
-    // var planetsArray = planetsString.split("|")
+    var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
+    var planetsArray = planetsString.split("|")
 
     /**
      * TODO:
@@ -25,11 +25,13 @@
      * string, and <li> tags around each planet.
      */
 
-    var planetsStringBreak = planetsArray.join("<br>")
-    console.log(planetsStringBreak);
 
-    console.log(planetsArray);
-    planets
+    planetsString = planetsArray.join('<br>')
+    document.write(planetsString)
+
+    //Useful for creating a vertical list without typing it all in HTML
+
+
 
 
 
