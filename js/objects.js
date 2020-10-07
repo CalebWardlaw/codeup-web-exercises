@@ -99,8 +99,6 @@
         {title:"4k Resolution",firstName: "Luke", lastName:"Scott"},
         ];
 
-
-
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -127,12 +125,13 @@
      */
 
 
-    books.forEach(book => {
-
+    books.forEach(function (book, index) {
+        console.log("Book # " + parseInt(index + 1));
         console.log("Title: " + book.title)
         console.log("Author: " + book.firstName + " " + book.lastName)
         console.log("---")
-    })
+
+    });
 
 
 
@@ -148,3 +147,5 @@
      */
 
 })();
+
+
