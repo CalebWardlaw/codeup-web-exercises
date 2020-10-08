@@ -246,19 +246,55 @@ var aphorisms = [
 ]
 
 //TODO: What variable represents the array of aphorisms
+
 aphorisms
+
 //TODO: Console.log 'aphorisms'. Explore the data structure. What are some things you notice?
+
+// console.log(aphorisms)
 
 //TODO:How long is this array?
 
+console.log(aphorisms.length)
+
 //TODO: Assign the first quote/author object to the variable firstQuote. Log the quote from the variable. Log the author from the variable.
 
+var firstQuote = aphorisms[0]
+
+console.log(firstQuote.quote)
+console.log(firstQuote.author)
+
 //TODO: Assign the last quote/author object to the variable lastQuote. Log the quote from the variable. Log the author from the variable.
+
+var lastQuote = aphorisms[60]
+
+console.log(lastQuote.quote)
+console.log(lastQuote.author)
 
 //TODO: Without using a loop, log the first 5 quotes and their author in the format quote + "-author"
 //Example: "build something 100 people love, not something 1 million people kind of like -Brian Chesky"
 
+console.log(firstQuote.quote + " - " + firstQuote.author)
+
+var secondQuote = aphorisms[1]
+
+console.log(secondQuote.quote + " - " + secondQuote.author)
+
+var thirdQuote = aphorisms[2]
+
+console.log(thirdQuote.quote + " - " + thirdQuote.author)
+
+var fourthQuote = aphorisms[3]
+
+console.log(fourthQuote.quote + " - " + fourthQuote.author)
+
+var fifthQuote = aphorisms [4]
+
+console.log(fifthQuote.quote + " - " + fifthQuote.author)
+
 //TODO: After doing this 'manually' why is a loop more beneficial?
+
+//less typing
 
 //TODO: Write a function named 'formatQuote' that accepts an aphorism object and returns a string containing the quote and author in the format "quote" + "-author"
 /*
