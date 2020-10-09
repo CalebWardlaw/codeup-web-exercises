@@ -1,7 +1,9 @@
-// (function() {
+(function() {
     "use strict";
 
     // create a circle object
+
+    // **************** START: The scope of the circle where we can use the THIS keyword starts here **************
     var circle = {
         radius: 3,
 
@@ -30,22 +32,24 @@
             }
 
 
-            console.log("Area of a circle with radius: " + this.radius + ", is:" +circleArea);
+            console.log("Area of a circle with radius: " + this.radius + ", is:" + circleArea);
         }
     };
 
+    // **************** END: The scope of the circle where we can use the THIS keyword starts here **************
+
     // log info about the circle
-    // console.log("Raw circle information");
-    // circle.logInfo(false);
-    // console.log("Circle information rounded to the nearest whole number");
-    // circle.logInfo(true);
-    //
-    // console.log("=======================================================");
-    // // TODO: Change the radius of the circle to 5.
-    //
-    // // log info about the circle
-    // console.log("Raw circle information");
-    // circle.logInfo(false);
-    // console.log("Circle information rounded to the nearest whole number");
-    // circle.logInfo(true);
-// })();
+    console.log("Raw circle information");
+    circle.logInfo(false);
+    console.log("Circle information rounded to the nearest whole number");
+    circle.logInfo(true);
+
+    console.log("=======================================================");
+    // TODO: Change the radius of the circle to 5.
+
+    // log info about the circle
+    console.log("Raw circle information");
+    circle.logInfo(false);
+    console.log("Circle information rounded to the nearest whole number");
+    circle.logInfo(true);
+})();
