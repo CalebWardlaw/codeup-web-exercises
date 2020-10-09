@@ -46,7 +46,8 @@
 
     console.log("=======================================================");
     // TODO: Change the radius of the circle to 5.
-
+    circle.radius=5
+    //this swap is possible because we have reassigned the variable
     // log info about the circle
     console.log("Raw circle information");
     circle.logInfo(false);
