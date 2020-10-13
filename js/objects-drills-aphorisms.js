@@ -306,6 +306,10 @@ console.log(fifthQuote.quote + " - " + fifthQuote.author)
 *Example Output: What’s the one thing you can do, such that by doing it, everything else will be easier or unnecessary? -Gary Keller"
 **/
 
+function formatQuote(object){
+	return aphorisms[object]
+}
+
 //TODO: Write a function named getRandomQuote, that accepts the aphorisms array, and returns a string that contains a random quote and author in the format "quote" + "-author".
 
 //TODO: Write a function named fiveRandomQuotes, that accepts the aphorisms array and returns an array of five random quotes and authors in the format "quote" + "-author".

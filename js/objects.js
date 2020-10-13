@@ -12,12 +12,12 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
-    // var person = {};
-    //
-    // person.firstName="Caleb";
-    // console.log(person.firstName);
-    // person.lastName="Wardlaw";
-    // console.log(person.lastName);
+    var person = {};
+
+    person.firstName="Caleb";
+    console.log(person.firstName);
+    person.lastName="Wardlaw";
+    console.log(person.lastName);
 
 
     /**
@@ -77,7 +77,6 @@
 
 
 
-
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -91,13 +90,13 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-    var books = [
-        {title: "GodFall",firstName: "John" ,lastName: "Smith"},
-        {title: "Beyond Light",firstName: "Aaron", lastName:"Jones"},
-        {title:"SackBoy",firstName: "Luke", lastName:"Scott"},
-        {title:"God of War",firstName: "Luke", lastName:"Scott"},
-        {title:"4k Resolution",firstName: "Luke", lastName:"Scott"},
-        ];
+    // var books = [
+    //     {title: "GodFall",firstName: "John" ,lastName: "Smith"},
+    //     {title: "Beyond Light",firstName: "Aaron", lastName:"Jones"},
+    //     {title:"SackBoy",firstName: "Luke", lastName:"Scott"},
+    //     {title:"God of War",firstName: "Luke", lastName:"Scott"},
+    //     {title:"4k Resolution",firstName: "Luke", lastName:"Scott"},
+    //     ];
 
     /**
      * TODO:
@@ -125,13 +124,13 @@
      */
 
 
-    books.forEach(function (book, index) {
-        console.log("Book # " + parseInt(index + 1));
-        console.log("Title: " + book.title)
-        console.log("Author: " + book.firstName + " " + book.lastName)
-        console.log("---")
-
-    });
+    // books.forEach(function (book, index) {
+    //     console.log("Book # " + parseInt(index + 1));
+    //     console.log("Title: " + book.title)
+    //     console.log("Author: " + book.firstName + " " + book.lastName)
+    //     console.log("---")
+    //
+    // });
 
 
 
@@ -146,9 +145,7 @@
      *   `showBookInfo` function.
      */
 
-    function createBook(title, author){
 
-    }
 })();
 
 
