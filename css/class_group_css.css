@@ -1,0 +1,9 @@
+/* Element selectors, aka type selectors, match by node name
+These are the ***LEAST*** specific
+*/
+
+
+
+/* Class selectors match elements based on class attribute and are a step up
+ in specificity rankings (more specific than elements) */
+
