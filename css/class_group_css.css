@@ -5,7 +5,12 @@ p {
     color: red;
 }
 
-
 /* Class selectors match elements based on class attribute and are a step up
  in specificity rankings (more specific than elements) */
+
+
+.fancy {
+    color:blue;
+}
+
 
