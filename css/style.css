@@ -2,3 +2,16 @@
     color: purple; /* single line comment */
     text-decoration: underline;
 }
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: #77AF00;
+    text-decoration: underline;
+}
+
+body{
+    background-color: lightgrey;
+}
