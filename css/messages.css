@@ -11,3 +11,11 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+
+.message{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    width: 80%;
+    padding: .5em;
+    margin: .5em auto;
+}
