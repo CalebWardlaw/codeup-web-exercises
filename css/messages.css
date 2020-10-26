@@ -19,3 +19,18 @@ body, html {
     padding: .5em;
     margin: .5em auto;
 }
+
+.message-info{
+    background: var(--blue);
+}
+
+.message-success{
+    background: #CFF3DA;
+}
+
+.message-warning{
+    background: #FCFBC9;
+}
+.message-error{
+    background: #FAD3D7;
+}
