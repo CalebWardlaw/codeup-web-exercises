@@ -9,3 +9,7 @@ h1.display-4 {
     background-color: lightgrey;
     opacity: 65%;
 }
+
+h2 {
+    padding-bottom: .5em;
+}
