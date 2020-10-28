@@ -12,7 +12,7 @@
      */
 
 
-    // console.log(planetsArray);
+    console.log(planetsArray);
 
     /**
      * TODO:
