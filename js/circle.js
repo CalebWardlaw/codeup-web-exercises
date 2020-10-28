@@ -36,7 +36,7 @@
         }
     };
 
-    // **************** END: The scope of the circle where we can use the THIS keyword starts here **************
+    // ***************** END: The scope of the circle where we can use the THIS keyword starts here **************
 
     // log info about the circle
     console.log("Raw circle information");
