@@ -13,3 +13,7 @@ h1.display-4 {
 h2 {
     padding-bottom: .5em;
 }
+
+.card-title {
+    background: blue;
+}
