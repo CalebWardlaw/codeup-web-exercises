@@ -15,7 +15,7 @@
      * array.
      */
 
-    // console.log(names.length);
+    console.log(names.length);
 
     /**
      * TODO:
@@ -23,10 +23,10 @@
      * accessing each element's index.
      */
 
-    // console.log(names[0]);
-    // console.log(names[1]);
-    // console.log(names[2]);
-    // console.log(names[3]);
+    console.log(names[0]);
+    console.log(names[1]);
+    console.log(names[2]);
+    console.log(names[3]);
 
     /**
      * TODO:
@@ -34,9 +34,9 @@
      * array.
      */
 
-    // for(var i=0; i<=3; i++){
-    //     console.log(names[i]);
-    // }
+    for(var i=0; i<=3; i++){
+        console.log(names[i]);
+    }
 
     /**
      * TODO:
