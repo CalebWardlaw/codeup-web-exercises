@@ -1,0 +1,15 @@
+.jumbotron {
+    background-image: url('../img/pizza.png');
+}
+
+h1 {
+    opacity: 60%;
+}
+
+h2 {
+    padding-bottom: .5em;
+}
+
+.card-title {
+    background: blue;
+}
