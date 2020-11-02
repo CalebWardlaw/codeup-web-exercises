@@ -1,0 +1,26 @@
+/*SMALL*/
+
+
+.circle {
+    line-height: 18px;
+    text-align: center;
+    font: Anton;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background: #E6563B;
+    border-radius: 50%
+}
+
+/*LARGE*/
+
+.circle {
+    line-height: 18px;
+    text-align: center;
+    font: Anton;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background: #E6563B;
+    border-radius: 50%
+}
