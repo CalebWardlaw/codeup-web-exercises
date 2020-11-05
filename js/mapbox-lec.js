@@ -86,7 +86,11 @@ var popup = new mapboxgl.Popup()
 // TODO TOGETHER: Using the Geocoder helper function, log the coordinates of Codeup and recenter the map to focus on Codeup.
 //https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setcenter
 
-
+geocode("600 Navarro St #350, San Antonio, TX 78205", mapboxToken).then(function(result) {
+    console.log(result);
+    map.setCenter(result);
+    map.setZoom(20);
+});
 //TODO: Using the geocode method above, add a marker at Codeup to the map
 //TODO: Instead of setCenter try using map.jumpTo()
 //TODO: Instead of setCenter try using map.flyTo()
