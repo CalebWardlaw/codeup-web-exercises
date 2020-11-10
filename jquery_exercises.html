@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>J Query Exercises</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
 
@@ -22,12 +23,39 @@
     <p id="paragraph" class="pargraph-one">This is in a div</p>
 </div>
 
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="js/jquery-2.2.4.js"></script>
 <script>
 
     $(document).ready(function() {
         "use strict";
         alert( 'The DOM has finished loading!' );
+
+
+        var someHeading = $('#heading');
+        // console.log(someHeading.text());
+
+        //
+        // var someList = $('#list-container')
+        // console.log(someList);
+        // alert(someList.text())
+
+        //use of duplicate id caused the first one to display, not the second
+
+        // $('.codeup').css('border', '1px solid red')
+
+        // $('.single-item').css('font-size', '20px')
+        //
+        // $('.main-header').css('background-color', '#FFFF00')
+        // $('#paragraph').css('background-color', '#FFFF00')
+        // $('.single-item').css('background-color', '#FFFF00')
+
+        // alert(someHeading.text())
+
+        $('.main-header, #paragraph, .single-item').css('background-color', '#FFFF00')
+
+
     });
 </script>
 </body>
