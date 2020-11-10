@@ -32,27 +32,33 @@
         "use strict";
         alert( 'The DOM has finished loading!' );
 
-
+        //*** Use Jquery to select element by ID's ***
         var someHeading = $('#heading');
-        // console.log(someHeading.text());
+        // alert(someHeading.text())
 
-        //
+        //*** Alert a different ID ***
         // var someList = $('#list-container')
-        // console.log(someList);
         // alert(someList.text())
 
-        //use of duplicate id caused the first one to display, not the second
+        //*** Use of duplicate IDs causes the first to be executed and not the second ***
 
+        //*** Using Codeup class to create border ***
         // $('.codeup').css('border', '1px solid red')
 
+        //*** Applying codeup as an ID of another element will not execute a border on that element
+
+        //*** Set all font sizes of li to 20px ***
         // $('.single-item').css('font-size', '20px')
-        //
+
+        //*** Craft selectors that highlight all the h1, p, and li elements **
         // $('.main-header').css('background-color', '#FFFF00')
         // $('#paragraph').css('background-color', '#FFFF00')
         // $('.single-item').css('background-color', '#FFFF00')
 
+        //*** Alert the contents of h1 ***
         // alert(someHeading.text())
 
+        //*** Combine selectors that highlight h1, p, and li elements
         $('.main-header, #paragraph, .single-item').css('background-color', '#FFFF00')
 
 
