@@ -76,6 +76,7 @@
             $('#paragraph-two').css('font-size', '18px')
         });
 
+
         $('#list-container').hover(
             function() {
                 $(this).css('text-color', '#FF0');
@@ -85,7 +86,9 @@
             }
         );
 
-
+        $(document).on("keydown", function() {
+            console.log('key down event');
+        });
     });
 </script>
 </body>
