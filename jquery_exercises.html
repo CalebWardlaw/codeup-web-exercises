@@ -23,6 +23,10 @@
     <p id="paragraph" class="pargraph-one">This is in a div</p>
 </div>
 
+<p id="paragraph-two" class="paragraph-two">This is NOT in a div</p>
+
+
+
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="js/jquery-2.2.4.js"></script>
@@ -30,10 +34,10 @@
 
     $(document).ready(function() {
         "use strict";
-        alert( 'The DOM has finished loading!' );
+        // alert( 'The DOM has finished loading!' );
 
         //*** Use Jquery to select element by ID's ***
-        var someHeading = $('#heading');
+        // var someHeading = $('#heading');
         // alert(someHeading.text())
 
         //*** Alert a different ID ***
@@ -59,7 +63,27 @@
         // alert(someHeading.text())
 
         //*** Combine selectors that highlight h1, p, and li elements
-        $('.main-header, #paragraph, .single-item').css('background-color', '#FFFF00')
+        // $('.main-header, #paragraph, .single-item').css('background-color', '#FFFF00')
+
+        //*** Click h1 to change background ***
+        var head = document.getElementById('heading');
+        head.addEventListener('click', function(e) {
+            $('.main-header').css('background-color', '#FFFF00');
+        });
+
+        var para = document.getElementById('paragraph-two');
+        para.addEventListener('dblclick', function(e) {
+            $('#paragraph-two').css('font-size', '18px')
+        });
+
+        $('#list-container').hover(
+            function() {
+                $(this).css('text-color', '#FF0');
+            },
+            function() {
+                $(this).css('text-color', '#FFF');
+            }
+        );
 
 
     });
