@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>J Query Exercises</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+
+<h1 id="heading" class="main-header">JQuery</h1>
+
+
+<ul id="list-container" class="unordered-list">
+    <li id="list-item-one" class="single-item">Number 1</li>
+    <li id="list-item-two" class="single-item">Number 2</li>
+    <li id="list-item-three" class="single-item">Number 3</li>
+</ul>
+
+<div id="some-container" class="paragraph-container">
+    <p id="paragraph" class="pargraph-one">This is in a div</p>
+</div>
+
+<p id="paragraph-two" class="paragraph-two">This is NOT in a div</p>
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+
+    $(document).ready(function() {
+        "use strict";
+        // alert( 'The DOM has finished loading!' );
+
+        //*** Use Jquery to select element by ID's ***
+        // var someHeading = $('#heading');
+        // alert(someHeading.text())
+
+        //*** Alert a different ID ***
+        // var someList = $('#list-container')
+        // alert(someList.text())
+
+        //*** Use of duplicate IDs causes the first to be executed and not the second ***
+
+        //*** Using Codeup class to create border ***
+        // $('.codeup').css('border', '1px solid red')
+
+        //*** Applying codeup as an ID of another element will not execute a border on that element
+
+        //*** Set all font sizes of li to 20px ***
+        // $('.single-item').css('font-size', '20px')
+
+        //*** Craft selectors that highlight all the h1, p, and li elements **
+        // $('.main-header').css('background-color', '#FFFF00')
+        // $('#paragraph').css('background-color', '#FFFF00')
+        // $('.single-item').css('background-color', '#FFFF00')
+
+        //*** Alert the contents of h1 ***
+        // alert(someHeading.text())
+
+        //*** Combine selectors that highlight h1, p, and li elements
+        // $('.main-header, #paragraph, .single-item').css('background-color', '#FFFF00')
+
+        //*** Click h1 to change background ***
+        var head = document.getElementById('heading');
+        head.addEventListener('click', function(e) {
+            $('.main-header').css('background-color', '#FFFF00');
+        });
+
+        var para = document.getElementById('paragraph-two');
+        para.addEventListener('dblclick', function(e) {
+            $('#paragraph-two').css('font-size', '18px')
+        });
+
+
+        $('#list-container').hover(
+            function() {
+                $(this).css('text-color', '#FF0');
+            },
+            function() {
+                $(this).css('text-color', '#FFF');
+            }
+        );
+
+        $(document).on("keydown", function() {
+            console.log('key down event');
+        });
+    });
+</script>
+</body>
+</html>

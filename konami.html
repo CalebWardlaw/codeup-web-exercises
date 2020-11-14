@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Konami Code</title>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+    <h1 id="someHeader" class="konamiHeader">Konami Code</h1>
+<script src="http://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script>
+
+
+         "use strict";
+         // create keys we are searching for
+         var allowedKeys = {
+             13: 'enter',
+             37: 'left',
+             38: 'up',
+             39: 'right',
+             40: 'down',
+             65: 'a',
+             66: 'b'
+         };
+
+// create variable of code sequence
+         var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a', 'enter'];
+
+// variable for status of code sequence
+         var konamiCodePosition = 0;
+
+// use keydown listeners
+         document.addEventListener('keydown', function(e) {
+             var key = allowedKeys[e["keyCode"]];
+             var requiredKey = konamiCode[konamiCodePosition];
+
+             if (key === requiredKey) {
+                 konamiCodePosition++;
+                 if (konamiCodePosition === konamiCode.length) {
+                     activateCheats();
+                     konamiCodePosition = 0;
+                 }
+             } else {
+                 konamiCodePosition = 0;
+             }
+         });
+
+         function activateCheats() {
+             $('.konamiHeader').css('background-color', '#FFFF00')
+             alert("You have added 30 lives!");
+         }
+</script>
+
+</body>
+
+</html>
