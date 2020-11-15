@@ -71,11 +71,11 @@ img {
 }
 
 .sub-section h2 {
-
+    font-size: 1.0em;
 }
 
 .sub-section {
-
+    font-style: italic;
 }
 
 footer {
@@ -102,6 +102,7 @@ footer {
     }
 
     .nav-links li {
+    background: none;
     margin-left: 1em;
     }
 
