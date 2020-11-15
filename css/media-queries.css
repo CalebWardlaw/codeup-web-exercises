@@ -11,25 +11,32 @@ body {
 }
 
 .alert-info a {
+    background: #8CFFFF;
+    width: 100%;
+    height: 3.5em;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
+    text-decoration: none;
+    border: 3px solid grey;
 }
 
 .alert-info a:hover {
-
+    opacity: .7;
 }
 
 .alert-info a:active {
-
+    opacity: 1;
 }
 
 h1 {
+    font-size: 3em;
     margin: .2em auto .5em auto;
 }
 
 img {
-
+    width: 100%;
 }
 
 .header-img {
