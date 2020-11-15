@@ -45,11 +45,16 @@ img {
 
 .nav-links {
     display: flex;
+    list-style: none;
     flex-direction: column;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-links li {
+    background: lightgrey;
     display: flex;
+    height: 3.5em;
     margin-bottom: .7em;
 }
 
@@ -58,11 +63,11 @@ img {
 }
 
 .nav-links a:hover {
-
+    color: purple;
 }
 
 .nav-links a:active {
-
+    color: red;
 }
 
 .sub-section h2 {
