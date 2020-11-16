@@ -37,7 +37,11 @@
     function buildHTML(posts) {
         var postsHTML = "";
         posts.forEach(function(post) {
-            postsHTML += "I'm alive"
+            postsHTML += "<div>";
+            postsHTML += post.title + "<br>" + "<br>"
+            postsHTML += post.content + "<br>" + "<br>"
+            postsHTML += post.categories + "<br>" + "<br>"
+            postsHTML += "</div>"
         })
 
         $('#posts').html(postsHTML)
