@@ -16,5 +16,15 @@
             "sugar"
         ],
         "date": "February 14, 2015"
-    }
+    }, {
+    "title": "The Third Post",
+    "content": "Man, I can't wait to play destiny after class today. I'm going to unlock the aspects for the titan behemoth class. Might even do my other characters too. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eveniet minima molestias nemo porro quam quas sed, voluptate. Blanditiis consequatur eum illo impedit ipsum iure nostrum omnis provident, quo unde. Need to hit 1230 minimum for the raid on Saturday. Not sure what weapons to masterwork, but it'll be fun!",
+    "categories": [
+        "destiny",
+        "ps5",
+        "video games"
+
+    ],
+    "date": "November 16, 2020"
+}
 ]
