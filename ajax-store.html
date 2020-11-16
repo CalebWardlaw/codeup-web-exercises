@@ -25,19 +25,30 @@
 (function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
+
     $.ajax({
-        url: "data/inventory.json",
+        url: "./data/inventory.json",
         type: "GET",
         data: {
             limit: 10,
             offset: 20
         }
-    }).done(function(data) {
-        console.log(data)
-    });
+    })
+
+    $.ajax("./data/inventory.json").done(function(data, status, jqXhr)  {
+        alert("ajax call completed");
+    })
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
+    function buildHTML(tools){
+        var toolsHTML = "";
+        tools.forEach(function(tool){
+            toolsHTML += "<th>" + tool.title + "<th/>";
+        })
+
+    }
+
     //       HINT: You will want to target #insertProducts for your new HTML elements
 })();
 </script>
