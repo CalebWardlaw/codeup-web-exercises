@@ -1,5 +1,11 @@
-[
-    {
+[   {
+        "title": "Title",
+        "quantity": "Quantity",
+        "categories": [
+            "Categories"
+        ],
+        "price": "Price"
+    }, {
         "title": "Hammer",
         "quantity": 25,
         "categories": [
