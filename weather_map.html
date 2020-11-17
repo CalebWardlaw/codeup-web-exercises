@@ -52,12 +52,12 @@
             var temp = data.main.temp
             console.log(data)
             console.log(temp);
-            addToHTML(data);
+            addToHTML(temp);
         });
 
-        function addToHTML(){
+        function addToHTML(temp){
             var buildHTML = "";
-            buildHTML += "look at me"
+            buildHTML += "It is currently " + temp + " outside";
 
             $('#found').html(buildHTML)
 
