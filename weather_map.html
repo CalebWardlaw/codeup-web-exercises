@@ -11,6 +11,11 @@
     <title>weather_map</title>
 </head>
 <body>
+
+<div id="dayOne"></div>
+
+
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
@@ -20,7 +25,59 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+<script src="js/keys.js"></script>
+<script>
+    $(document).ready(function () {
+
+        "use strict";
+
+        var weatherDayOne =
+            $.ajax({
+                url: "http://api.openweathermap.org/data/2.5/weather",
+                type: "GET",
+                data: {
+                    APPID: OPEN_WEATHER_APPID,
+                    q:     "San Antonio, US",
+                    units: "imperial"
+                }
+            }).done(function(data){
+                console.log(data)
+            });
+        // function buildHTML(data) {
+        //     var dataHTML = "";
+        //     data.forEach(function(data) {
+        //         dataHTML += "<p>" + "FIND ME" + "</p>";
+        //     })
+        //
+        //     $('#dayOne').html(dataHTML)
+        // }
 
 
+
+        //Initiating callback to verify request in console
+        // $.ajax("http://api.openweathermap.org/data/2.5/weather").done(function(data, status, jqXhr)  {
+        //     alert("ajax call completed");
+        //     console.log(status);
+        //     console.log(jqXhr);
+        //     buildHTML(data);
+        // })
+
+        // $.get("http://api.openweathermap.org/data/2.5/weather", {
+        //     APPID: OPEN_WEATHER_APPID,
+        //     lat: 29.423017,
+        //     lon: -98.48527,
+        //     units: "imperial"
+        // }).done(function (data) {
+        //     console.log(data);
+        //     console.log(weatherDayOne);
+        // });
+
+
+    });
+
+
+
+
+</script>
 </body>
 </html>
