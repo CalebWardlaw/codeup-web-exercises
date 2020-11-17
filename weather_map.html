@@ -40,28 +40,69 @@
     $(document).ready(function () {
         "use strict";
 
-        $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/weather",
-            type: "GET",
-            data: {
-                APPID: OPEN_WEATHER_APPID,
-                q: "San Antonio, US",
-                units: "imperial"
-            }
+        // SAN ANTONIO API DATA
+        //     "id": 4726206,
+        //     "name": "San Antonio",
+        //     "state": "TX",
+        //     "country": "US",
+        //     "coord": {
+        //     "lon": -98.493629,
+        //         "lat": 29.42412
+        // }
+
+        $.get("http://api.openweathermap.org/data/2.5/onecall", {
+            APPID: OPEN_WEATHER_APPID,
+            lat: 29.4241,
+            lon: -98.4936,
+            units: "imperial",
+            exclude: "current,minutely,hourly,alerts"
         }).done(function (data) {
-            var temp = data.main.temp
+            // var temp = data.main.temp
+            // var humid = data.main.humidity
             console.log(data)
-            console.log(temp);
-            addToHTML(temp);
+            // console.log(data.daily)
+            // console.log(data.daily[1])
+            // console.log(temp);
+            // addToHTML(data)
         });
 
-        function addToHTML(temp){
-            var buildHTML = "";
-            buildHTML += "It is currently " + temp + " outside";
+        // function addToHTML(data){
+        //     var buildHTML = "";
+        //     var temp = data.main.temp
+        //     var humid = data.main.humidity
+        //     buildHTML += "It is currently " + temp + "<br>";
+        //     buildHTML += "Humidity is currently " + humid;
+        //     $('.card-text').html(buildHTML)
+        //
+        // }
 
-            $('#found').html(buildHTML)
 
-        }
+
+        // $.ajax({
+        //     url: "http://api.openweathermap.org/data/2.5/weather",
+        //     type: "GET",
+        //     data: {
+        //         APPID: OPEN_WEATHER_APPID,
+        //         q: "San Antonio, US",
+        //         units: "imperial"
+        //     }
+        // }).done(function (data) {
+        //     var temp = data.main.temp
+        //     var humid = data.main.humidity
+        //     console.log(data)
+        //     console.log(temp);
+        //     addToHTML(data)
+        // });
+        //
+        // function addToHTML(data){
+        //     var buildHTML = "";
+        //     var temp = data.main.temp
+        //     var humid = data.main.humidity
+        //     buildHTML += "It is currently " + temp + "<br>";
+        //     buildHTML += "Humidity is currently " + humid;
+        //     $('.card-text').html(buildHTML)
+        //
+        // }
 
     });
 
