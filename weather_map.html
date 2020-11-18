@@ -40,41 +40,32 @@
     $(document).ready(function () {
         "use strict";
 
-        // SAN ANTONIO API DATA
-        //     "id": 4726206,
-        //     "name": "San Antonio",
-        //     "state": "TX",
-        //     "country": "US",
-        //     "coord": {
-        //     "lon": -98.493629,
-        //         "lat": 29.42412
-        // }
-
         $.get("http://api.openweathermap.org/data/2.5/onecall", {
             APPID: OPEN_WEATHER_APPID,
             lat: 29.4241,
             lon: -98.4936,
             units: "imperial",
-            exclude: "current,minutely,hourly,alerts"
+            exclude: "currently,minutely,hourly,alerts"
         }).done(function (data) {
             // var temp = data.main.temp
             // var humid = data.main.humidity
-            console.log(data)
             // console.log(data.daily)
-            // console.log(data.daily[1])
+            // console.log(data.daily[0].humidity)
+            // console.log(data.daily[0].humidity)
             // console.log(temp);
-            // addToHTML(data)
+            addToHTML(data)
         });
 
-        // function addToHTML(data){
-        //     var buildHTML = "";
-        //     var temp = data.main.temp
-        //     var humid = data.main.humidity
-        //     buildHTML += "It is currently " + temp + "<br>";
-        //     buildHTML += "Humidity is currently " + humid;
-        //     $('.card-text').html(buildHTML)
-        //
-        // }
+        function addToHTML(data){
+            var buildHTML = "";
+            // var temp = data.daily[0].temp.day
+            var humid = data.daily[0].humidity
+            // buildHTML += "It is currently " + temp + "<br>";
+            buildHTML += "Humidity is currently " + humid;
+            $('.card-text').html(buildHTML)
+
+        }
+
 
 
 
