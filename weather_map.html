@@ -12,13 +12,6 @@
 </head>
 <body>
 
-<div class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-</div>
 
 <div id="found">
 
@@ -48,37 +41,46 @@
             exclude: "currently,minutely,hourly,alerts"
         //Sending weather data to funciton
         }).done(function (data) {
-            console.log(data);
             addToHTML(data)
         });
 
 
         //Using weather data to populate HTML
         function addToHTML(data) {
+            var buildHTML = "";
         //For loop to cycle through the days
-            for (var i = 1; i <= 5; i++) {
-                var buildHTML = "";
-                var temp = data.daily[i].temp.day
-                var cloud = data.daily[i].clouds
-                var humid = data.daily[i].humidity;
-                var dailyForecast =  [
-                    "Temperature " + temp,
-                    "Cloud Coverage " + cloud,
-                    "Humidity " + humid
+            for (var i = 0; i <= 4; i++) {
+                var temp = data.daily[i].temp.day + "<br>"
+                var cloud = data.daily[i].clouds + "<br>"
+                var humid = data.daily[i].humidity + "<br>"
+                // var dailyForecast =  [
+                //     "Temperature " + temp +
+                //     "Cloud Coverage " + cloud +
+                //     "Cloud Coverage " + cloud + ]
 
-                ]
-                console.log(dailyForecast);
-
-
-
-                $('.card-text').html(buildHTML)
+                buildHTML += "<div class=\"card\" style=\"width: 18rem;\">"
+                buildHTML += "<div class=\"card-body\">"
+                buildHTML += "<h5 class=\"card-title\">" + "DAY" + "</h5>"
+                buildHTML += "<h6 class=\"card-subtitle mb-2 text-muted\">" + "SUBTITLE" + "</h6>"
+                buildHTML += "<p class=\"card-text\">"
+                buildHTML += "Temperature " + temp + "Humidity" + humid + "Cloud Coverage " + cloud
+                buildHTML += "</p>"
+                buildHTML += "</div>"
+                buildHTML += "</div>"
+                //Sending HTML to card
+                $('#found').html(buildHTML)
             }
+            // buildHTML += dailyForecast
+            // //Sending HTML to card
+            // $('.card-text').html(buildHTML)
         }
 
 
     });
 
 
+    // buildHTML += temp;
+    //
 
 
 </script>
