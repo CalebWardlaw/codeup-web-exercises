@@ -39,83 +39,42 @@
 <script>
     $(document).ready(function () {
         "use strict";
-
+        //AJAX call
         $.get("http://api.openweathermap.org/data/2.5/onecall", {
             APPID: OPEN_WEATHER_APPID,
             lat: 29.4241,
             lon: -98.4936,
             units: "imperial",
             exclude: "currently,minutely,hourly,alerts"
+        //Sending weather data to funciton
         }).done(function (data) {
-            // var temp = data.main.temp
-            // var humid = data.main.humidity
-            // console.log(data.daily)
-            // console.log(data.daily[0].humidity)
-            // console.log(data.daily[0].humidity)
-            // console.log(temp);
+            console.log(data);
             addToHTML(data)
         });
 
 
-        for (var i=0; i<5; i++) {
-            console.log(i);
-        }
+        //Using weather data to populate HTML
+        function addToHTML(data) {
+        //For loop to cycle through the days
+            for (var i = 1; i <= 5; i++) {
+                var buildHTML = "";
+                var temp = data.daily[i].temp.day
+                var cloud = data.daily[i].clouds
+                var humid = data.daily[i].humidity;
+                var dailyForecast =  [
+                    "Temperature " + temp,
+                    "Cloud Coverage " + cloud,
+                    "Humidity " + humid
 
-        function addToHTML(data){
-            for (var i=0; i<5; i++) {
-                console.log(data.daily[i].humidity);
+                ]
+                console.log(dailyForecast);
+
+
+
+                $('.card-text').html(buildHTML)
             }
-            var buildHTML = "";
-            var humid = data.daily[0].humidity
-            // buildHTML += "It is currently " + temp + "<br>";
-            buildHTML += "Humidity is currently " + humid;
-            $('.card-text').html(buildHTML)
-
         }
 
-
-
-
-
-
-        // function addToHTML(data){
-        //
-        //         var buildHTML = "";
-        //         var humid = data.daily[0].humidity
-        //         // buildHTML += "It is currently " + temp + "<br>";
-        //         buildHTML += "Humidity is currently " + humid;
-        //     $('.card-text').html(buildHTML)
-        //
-        // }
-
-
-
-
-        // $.ajax({
-        //     url: "http://api.openweathermap.org/data/2.5/weather",
-        //     type: "GET",
-        //     data: {
-        //         APPID: OPEN_WEATHER_APPID,
-        //         q: "San Antonio, US",
-        //         units: "imperial"
-        //     }
-        // }).done(function (data) {
-        //     var temp = data.main.temp
-        //     var humid = data.main.humidity
-        //     console.log(data)
-        //     console.log(temp);
-        //     addToHTML(data)
-        // });
-        //
-        // function addToHTML(data){
-        //     var buildHTML = "";
-        //     var temp = data.main.temp
-        //     var humid = data.main.humidity
-        //     buildHTML += "It is currently " + temp + "<br>";
-        //     buildHTML += "Humidity is currently " + humid;
-        //     $('.card-text').html(buildHTML)
-        //
-        // }
 
     });
 
