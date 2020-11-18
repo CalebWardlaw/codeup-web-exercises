@@ -56,15 +56,37 @@
             addToHTML(data)
         });
 
+
+        for (var i=0; i<5; i++) {
+            console.log(i);
+        }
+
         function addToHTML(data){
+            for (var i=0; i<5; i++) {
+                console.log(data.daily[i].humidity);
+            }
             var buildHTML = "";
-            // var temp = data.daily[0].temp.day
             var humid = data.daily[0].humidity
             // buildHTML += "It is currently " + temp + "<br>";
             buildHTML += "Humidity is currently " + humid;
             $('.card-text').html(buildHTML)
 
         }
+
+
+
+
+
+
+        // function addToHTML(data){
+        //
+        //         var buildHTML = "";
+        //         var humid = data.daily[0].humidity
+        //         // buildHTML += "It is currently " + temp + "<br>";
+        //         buildHTML += "Humidity is currently " + humid;
+        //     $('.card-text').html(buildHTML)
+        //
+        // }
 
 
 
