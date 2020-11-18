@@ -39,6 +39,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
 <script src="js/keys.js"></script>
 
 <script>
@@ -53,52 +54,76 @@
             exclude: "currently,minutely,hourly,alerts"
         //Sending weather data to funciton
         }).done(function (data) {
-            console.log(data);
-            addToHTML(data)
+
+            addToHTML(data);
         });
 
 
 
 
-        //Using weather data to populate HTML
-        function addToHTML(data) {
-            var buildHTML = "";
-        //For loop to cycle through the days
-            for (var i = 0; i <= 4; i++) {
+    //Using weather data to populate HTML
+    function addToHTML(data) {
+        var buildHTML = "";
+    //For loop to cycle through the days
+        for (var i = 0; i <= 4; i++) {
+            var temp = data.daily[i].temp.day + "<br>";
+            var cloud = data.daily[i].clouds + "<br>";
+            var humid = data.daily[i].humidity + "<br>";
 
-                var temp = data.daily[i].temp.day + "<br>"
-                var cloud = data.daily[i].clouds + "<br>"
-                var humid = data.daily[i].humidity + "<br>"
-                //Converting unix timestap to human date
-                //First multiplying code by 1000 for milliseconds
-                var dateObject = new Date(data.daily[i].dt * 1000);
-                //Convert object to string
-                var humanDateFormat = dateObject.toLocaleString();
-                //Splitting string to seperate time and date
-                var dateOnly = humanDateFormat.split(' ');
-                //Calling date only
-                var dateOnlyCall = dateOnly[0]
+            /*Converting unix timestamp to human date
+            First multiplying code by 1000 for milliseconds*/
+            var dateObject = new Date(data.daily[i].dt * 1000);
+            //Convert object to string
+            var humanDateFormat = dateObject.toLocaleString();
+            //Splitting string to seperate time and date
+            var dateOnly = humanDateFormat.split(' ');
+            //Calling date only
+            var dateOnlyCall = dateOnly[0];
 
-
-
-                //Adding data to individual cards
-                buildHTML += "<div class=\"card\" style=\"width: 18rem;\">"
-                buildHTML += "<div class=\"card-body\">"
-                buildHTML += "<h5 class=\"card-title\">" + "DAY" + "</h5>"
-                buildHTML += "<h6 class=\"card-subtitle mb-2 text-muted\">" + dateOnlyCall + "</h6>"
-                buildHTML += "<p class=\"card-text\">"
-                buildHTML += "Temperature: " + temp + "Humidity: " + humid + "Cloud Coverage: " + cloud
-                buildHTML += "</p>"
-                buildHTML += "</div>"
-                buildHTML += "</div>"
-                //Sending HTML to card
-                $('#found').html(buildHTML)
+            //Adding data to individual cards
+            buildHTML += "<div class=\"card\" style=\"width: 18rem;\">";
+            buildHTML += "<div class=\"card-body\">";
+            buildHTML += "<h5 class=\"card-title\">" + "DAY" + "</h5>";
+            buildHTML += "<h6 class=\"card-subtitle mb-2 text-muted\">" + dateOnlyCall + "</h6>";
+            buildHTML += "<p class=\"card-text\">";
+            buildHTML += "Temperature: " + temp + "Humidity: " + humid + "Cloud Coverage: " + cloud;
+            buildHTML += "</p>";
+            buildHTML += "</div>";
+            buildHTML += "</div>";
+            //Sending HTML to card
+            $('#found').html(buildHTML);
             }
         }
 
-
     });
+</script>
+
+<body>
+
+<div id='map' style='width: 100%; height: 700px;'></div>
+
+
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+
+<script>
+    mapboxgl.accessToken = mapboxToken;
+
+    var mapOptions = {
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [-98.4916, 29.4252]
+    }
+
+    var map = new mapboxgl.Map(mapOptions);
+
+
+
+
 
 </script>
+
+
 </body>
 </html>
