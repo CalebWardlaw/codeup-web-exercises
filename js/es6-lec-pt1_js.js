@@ -173,7 +173,7 @@ Our program is located in ${program.location}. The program lasts ${program.lengt
  *       For Of Loops
  *****************************/
 
-
+//Tells it to log each element
 // const arr = ["one", "two", "three"];
 // for (let ele of arr) {
 //     console.log(ele);
@@ -186,7 +186,10 @@ Our program is located in ${program.location}. The program lasts ${program.lengt
 /*==============================================*/
 //TODO: Using for of loops, log each instructors name
 
-// const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+for (let ele of days) {
+	console.log(ele)
+}
 
 
 
@@ -242,18 +245,32 @@ function sum(a,b){
 /*==============================================*/
 //TODO: Rewrite the following function using arrow function syntax
 
+
 function addOne(arg1) {
     return arg1 + 1;
 }
 
+//Must turn it into a function expression when using a big arrow
+let addOneA = function(arg1){
+	return arg1 + 1;
+}
+//Refactor this using arrow syntax ... = > ....
+let addOneB = (arg1) => {
+	return arg1 + 1;
+}
 
-// console.log(addOneA(2));
-// console.log(addOneB(2));
-// console.log(addOneC(2));
-// console.log(addOneD(2));
+// remove curly braces (if only one statement)
+let addOneC = (arg1) => arg1 + 1;
+
+//remove parens if only 1 input
+let addOneD = arg1 => arg1 +1;
 
 
-
+console.log(addOne(1))
+console.log(addOneA(2));
+console.log(addOneB(2));
+console.log(addOneC(2));
+console.log(addOneD(2));
 
 
 
@@ -264,14 +281,19 @@ function addOne(arg1) {
 //TODO Together: Refactor the following using ES6
 
 // old way
-function sayHello(name) {
-	if (typeof name === 'undefined') {
-		name = 'World';
-	}
-	return 'Hello, ' + name + '!';
+// function sayHello(name) {
+// 	if (typeof name === 'undefined') {
+// 		name = 'World';
+// 	}
+// 	return 'Hello, ' + name + '!';
+// }
+
+function sayHelloA(name = 'World'){
+	return `Hello ${name}`;
 }
 
 
+console.log(sayHelloA());
 
 
 // console.log(sayHello());; // "Hello, World!"
