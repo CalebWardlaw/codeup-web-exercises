@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weather_map</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
+</head>
+<body>
+<style>
+    #found {
+        justify-content: center;
+        padding-top: 200px;
+    }
+
+    .card {
+        margin-right: 1em;
+        margin-bottom: 1em;
+    }
+    .coordinates {
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        position: absolute;
+        bottom: 40px;
+        left: 10px;
+        padding: 5px 10px;
+        margin: 0;
+        font-size: 11px;
+        line-height: 18px;
+        border-radius: 3px;
+        display: none;
+    }
+
+    .mapboxgl-canvas {
+        justify-content: center;
+        flex: none;
+    }
+</style>
+
+
+<div class="container">
+<div id="found" class="row">
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+
+<script>
+    $(document).ready(function () {
+        "use strict";
+        //AJAX call
+        $.get("http://api.openweathermap.org/data/2.5/onecall", {
+            APPID: OPEN_WEATHER_APPID,
+            lat: 29.4241,
+            lon: -98.4936,
+            units: "imperial",
+            exclude: "currently,minutely,hourly,alerts"
+        //Sending weather data to funciton
+        }).done(function (data) {
+
+            addToHTML(data);
+        });
+
+    //Using weather data to populate HTML
+    function addToHTML(data) {
+        var buildHTML = "";
+    //For loop to cycle through the days
+        for (var i = 0; i <= 4; i++) {
+            var temp = data.daily[i].temp.day + "<br>";
+            var cloud = data.daily[i].clouds + "<br>";
+            var humid = data.daily[i].humidity + "<br>";
+
+            /*Converting unix timestamp to human date
+            First multiplying code by 1000 for milliseconds*/
+            var dateObject = new Date(data.daily[i].dt * 1000);
+            //Convert object to string
+            var humanDateFormat = dateObject.toLocaleString();
+            //Splitting string to seperate time and date
+            var dateOnly = humanDateFormat.split(' ');
+            //Calling date only
+            var dateOnlyCall = dateOnly[0];
+
+            //Adding data to individual cards
+            buildHTML += "<div class=\"card\" style=\"width: 18rem;\">";
+            buildHTML += "<div class=\"card-body\">";
+            buildHTML += "<h5 class=\"card-title\">" + "DAY" + "</h5>";
+            buildHTML += "<h6 class=\"card-subtitle mb-2 text-muted\">" + dateOnlyCall + "</h6>";
+            buildHTML += "<p class=\"card-text\">";
+            buildHTML += "Temperature: " + temp + "Humidity: " + humid + "Cloud Coverage: " + cloud;
+            buildHTML += "</p>";
+            buildHTML += "</div>";
+            buildHTML += "</div>";
+            //Sending HTML to card
+            $('#found').html(buildHTML);
+            }
+        }
+    });
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+        <div id="map" style="height: 300px"></div>
+        <pre id="coordinates" class="coordinates"></pre>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script>
+    // TO MAKE THE MAP APPEAR YOU MUST
+    // ADD YOUR ACCESS TOKEN FROM
+    // https://account.mapbox.com
+    mapboxgl.accessToken = mapboxToken;
+    var coordinates = document.getElementById('coordinates');
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [0, 0],
+        zoom: 2
+    });
+
+    var marker = new mapboxgl.Marker({
+        draggable: true
+    })
+        .setLngLat([0, 0])
+        .addTo(map);
+
+    function onDragEnd() {
+        var lngLat = marker.getLngLat();
+        coordinates.style.display = 'block';
+        coordinates.innerHTML =
+            'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+    }
+
+    marker.on('dragend', onDragEnd);
+</script>
+
+
+
+</body>
+</html>
