@@ -39,13 +39,13 @@ const users = [
 
 const countLanguages = users.filter(function(array){
     return array.languages.length >= 3;
-})
+});
 
 console.log(countLanguages);
 
 const stringEmails = users.map(function(users){
     return users.email
-})
+});
 
 console.log(stringEmails);
 
@@ -61,6 +61,17 @@ const longestEmail = users.reduce(function(currentLong, currentUser){
         return currentLong
     }
     return currentUser
-})
+});
 
 console.log(longestEmail);
+
+const userNames = users.map(function(users){
+    return users.name
+})
+
+console.log(userNames);
+
+const singleString = userNames.reduce((currentString, word) => `${currentString} ${word}`);
+
+console.log(singleString);
+
