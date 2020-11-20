@@ -50,10 +50,17 @@ const stringEmails = users.map(function(users){
 console.log(stringEmails);
 
 //What is the , 0)
-let yearsOfExp = users.reduce(function(currentSum, currentUser){
+const yearsOfExp = users.reduce(function(currentSum, currentUser){
     return currentSum + currentUser.yearsOfExperience
 }, 0)
 
 console.log(yearsOfExp);
 
+const longestEmail = users.reduce(function(currentLong, currentUser){
+    if(currentLong.email.length > currentUser.email.length){
+        return currentLong
+    }
+    return currentUser
+})
 
+console.log(longestEmail);
