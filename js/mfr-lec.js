@@ -104,7 +104,13 @@ console.log(vegetables);
 
 const numbersArray = [1, 2, 3, 4, 5];
 
+let sumAtThree;
+const sum = numbersArray.reduce(function(currentSum, currentNumber){
+    console.log(currentSum)
+    return currentSum + currentNumber;
+});
 
+console.log(sum);
 //accumulation = 0
 // add 1
 //accumulation = 1
