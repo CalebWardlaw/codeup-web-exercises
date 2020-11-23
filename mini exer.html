@@ -25,12 +25,12 @@
     const aPromise = successIfEvenUTCSecond();
 
     // TODO: if aPromise resolves, console.log 'VALUE_HERE is an even number!'
-    aPromise.then(()=> {
+    aPromise.then((data)=> {
         console.log(`${data} resolved`)
 
     });
     // TODO: if aPromise rejects, console.error 'VALUE_HERE is an odd number!'
-    aPromise.catch(() => {
+    aPromise.catch((error) => {
         console.error(`${error} rejected`)
 
     });
