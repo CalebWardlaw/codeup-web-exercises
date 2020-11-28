@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
     <style>
+        .invisible {display: none}
+        dt::first-letter {
+            font-size: large;
+            font-weight: bold;
+            color: red;
+        }
+        .highlighted {background-color: goldenrod}
+        .bold {font-weight: bolder}
+        .blue {color: coral}
 
     </style>
 </head>
@@ -82,11 +91,31 @@
         $('dd').addClass("invisible");
         $("ul").hide();
 
-        $('#toggle').click(function (){
+        $('#toggle').click(function(){
             $('dd').toggleClass("invisible");
         });
 
-    });
+        $('dt').click(function () {
+            $(this).addClass('highlighted');
+        });
+
+        $("#traversing").click(function(){
+            $('ul').each(function(){
+                // $(this).children(":last-child").addClass("highlighted");
+                $(this).children().last("li").addClass("highlighted")
+            })
+        });
+
+        $("h3").click(function(){
+            $(this).parent().children("li").addClass("bold");
+            $(this).next("ul").slideToggle(500);
+        });
+
+        $("li").click(function(){
+            $(this).parent().children("li").first().addClass("blue");
+            // $("li:nth-child(1)").addClass("blue");
+        });
+    })
 </script>
 
 </body>
