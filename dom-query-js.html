@@ -32,6 +32,8 @@
 
 <button id="btn4">First Item Blue</button>
 
+<button id="btn5">Change Paragraph</button>
+
 <script>
     // (function() {
     //     "use strict";
@@ -83,18 +85,6 @@
     document.getElementById('btn1').addEventListener('click', jsIsCool);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     var subHeaderBlue = function (event) {
         var subHeader = document.getElementById("sub-header");
         subHeader.style.color = '#0000FF';
@@ -119,6 +109,13 @@
     }
 
     document.getElementById('btn4').addEventListener('click', dbidBlue)
+
+    var changePara = function (event) {
+        var subParagraphs = document.getElementsByClassName('sub-paragraph');
+        subParagraphs[0].innerText = "Mission Accomplished!";
+    }
+
+    document.getElementById('btn5').addEventListener('click', changePara)
 
 
 
