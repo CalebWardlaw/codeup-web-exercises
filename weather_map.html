@@ -22,6 +22,12 @@
         padding-top: 200px;
     }
 
+    #navbar {
+        padding-top: 3em;
+        display: flex;
+        justify-content: center;
+    }
+
     .card {
         margin-right: 1em;
         margin-bottom: 1em;
@@ -44,8 +50,20 @@
         justify-content: center;
         flex: none;
     }
+
 </style>
 
+<div id="navbar">
+    <div id="user-search">
+        <input type="text" id="user-search-input" placeholder="Search by Location">
+        <button type="submit" id="submit-user-search">Search</button>
+    </div>
+    <div id="zoom-buttons">
+        <button class="medium-text roboto" id="set-zoom-3">View Country</button>
+        <button class="medium-text roboto" id="set-zoom-5">View State</button>
+        <button class="medium-text roboto" id="set-zoom-8">View City</button>
+    </div>
+</div>
 
 <div class="container">
 <div id="found" class="row">
@@ -174,6 +192,8 @@
     }
 
     marker.on('dragend', onDragEnd);
+
+
 </script>
 
 

@@ -19,6 +19,8 @@
     <tbody id="insertProducts"></tbody>
 </table>
 
+<button id="refresh-btn">Refresh</button>
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
@@ -44,6 +46,15 @@
     })
     //Checking that variable will work
     console.log(ajaxRequest.done);
+
+    function refreshFromJson() {
+        $.get('.data/inventory.json').done(function(tools) {
+            $('#insertProducts').html('');
+            for (var i = 0; i < tools.length; i += 1) {
+                $('#insertProducts').append(buildHTML(tools[i]));
+            }
+        });
+    }
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
@@ -64,6 +75,10 @@
         $('#products').html(productsHTML)
 
     }
+
+    $('#refresh-btn').click(refreshFromJson);
+
+    refreshFromJson();
 
     //       HINT: You will want to target #insertProducts for your new HTML elements
 })();
