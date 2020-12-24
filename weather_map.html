@@ -180,6 +180,9 @@
 
 
             function updateWeatherViaGeocoder(result){
+                console.log(result);
+                console.log(result.result);
+                console.log(result.result.center);
                 $.get("https://api.openweathermap.org/data/2.5/onecall", {
                     APPID: OPEN_WEATHER_APPID,
                     lat: result.result.center[1],
